@@ -1,5 +1,5 @@
 # [Choice] .NET version: 6.0-focal, 7.0-bullseye
-ARG VARIANT="6.0-bookworm"
+ARG VARIANT="6.0-focal"
 FROM mcr.microsoft.com/devcontainers/dotnet:1-${VARIANT}
 
 # Add .NET global tools path
