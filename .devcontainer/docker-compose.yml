@@ -9,7 +9,7 @@ services:
         # Update 'VARIANT' to pick a version of .NET: 6.0-focal, 7.0-bullseye
         VARIANT: "6.0-focal"
         # Optional version of Node.js
-        NODE_VERSION: "none"
+        NODE_VERSION: "16"
 
     volumes:
       - ..:/workspace:cached
@@ -27,6 +27,7 @@ services:
 
   db:
     image: mcr.microsoft.com/mssql/server:2022-latest
+    platform: linux/amd64
     hostname: SQL-Library
     container_name: SQL-Library
     restart: unless-stopped

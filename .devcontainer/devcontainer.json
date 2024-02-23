@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. 
 // For config options, see the README at: https://github.com/devcontainers/templates/tree/main/src/dotnet-mssql
 {
-	"name": "Data API builder and SQL Server",
+	"name": "Data API builder and Azure Static Web Apps",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
@@ -53,7 +53,7 @@
 	//			"protocol": "https"
 	//		}
 	// }
-	"forwardPorts": [5000, 5001, 4280, 1433],
+	"forwardPorts": [5000, 5001, 4280, 1433, 8080],
 
     // Post create commands to run after the container is created.
 	"postCreateCommand": "bash .devcontainer/sql/postCreateCommand.sh 'P@ssw0rd!' './bin/Debug/' './.devcontainer/sql/'",

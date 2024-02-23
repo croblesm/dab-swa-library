@@ -1,6 +1,6 @@
 # [Choice] .NET version: 6.0-focal, 7.0-bullseye
 ARG VARIANT="6.0-focal"
-FROM mcr.microsoft.com/devcontainers/dotnet:1-${VARIANT}
+FROM mcr.microsoft.com/devcontainers/dotnet:0-${VARIANT}
 
 # Add .NET global tools path
 ENV PATH $PATH:/home/vscode/.dotnet:/home/vscode/.dotnet/tools
@@ -11,7 +11,7 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends software-properties-common nodejs npm
+    && apt-get -y install --no-install-recommends software-properties-common npm
 
 # Install Static Web Apps CLI
 RUN npm install -g @azure/static-web-apps-cli
