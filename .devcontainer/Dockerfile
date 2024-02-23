@@ -13,9 +13,6 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends software-properties-common npm
 
-# Install Static Web Apps CLI
-RUN npm install -g @azure/static-web-apps-cli
-
 # Install SQL Tools: SQLPackage and sqlcmd
 COPY sql/installSQLtools.sh installSQLtools.sh
 RUN bash ./installSQLtools.sh \
