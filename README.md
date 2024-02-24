@@ -74,3 +74,6 @@ fetch('/data-api/api/Book').then(response => response.json()).then(data => conso
 > Access API in browser
 http://127.0.0.1:4280/
 http://127.0.0.1:4280/data-api/api/Book
+
+> Old connection string
+ "connection-string": "Server=localhost;Database=library;User ID=SA;Password=P@ssw0rd!;TrustServerCertificate=true",
