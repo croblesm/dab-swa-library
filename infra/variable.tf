@@ -1,15 +1,16 @@
 variable "resource_group_suffix" {
   description = "Resource group name"
-  default     = "sqlbits2024-demos-"
+  default     = "sqlbits2024-demos"
 }
 
 variable "region" {
   description = "Azure region where the resources will be deployed"
+  default     = "eastus2"
 }
 
 variable "sql_server_name" {
   description = "Name of the Azure SQL Database server"
-  default     = "library-db-"
+  default     = "library-db"
 }
 
 variable "sql_admin_login" {
@@ -24,10 +25,10 @@ variable "sql_admin_password" {
 
 variable "sql_database_name" {
   description = "Name of the Azure SQL Database"
-  default     = "Library"
+  default     = "library"
 }
 
 variable "web_app_name" {
   description = "Name of the Azure Static Web App"
-  default     = "library-app-"
+  default     = "library-app"
 }
