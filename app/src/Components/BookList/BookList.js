@@ -24,6 +24,23 @@ const BookList = () => {
         setIsLoading(false);
     };
 
+    const createBook = async (book) => {
+        try {
+            const response = await fetch('/data-api/api/Book', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-MS-API-ROLE' : 'admin',
+                },
+                body: JSON.stringify(book)
+            });
+            if (!response.ok) {
+                throw new Error(response.statusText);
+            }
+            await fetchData(true);
+        } catch (error) { }
+    }
+
     const deleteBook = async (id) => {
         try {
             const response = await fetch(`/data-api/api/Book/id/${id}`, {
@@ -56,12 +73,13 @@ const BookList = () => {
         <div className='book-page'>
             <div style={{ textAlign: 'left', margin: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h1>Books</h1>
-                <div>
-                    <Button variant="primary" onClick={() => setShowModal(true)}>
-                        Create
-                    </Button>
-                </div>
-                <CreateBookModal showModal={showModal} setShowModal={setShowModal} refetch={fetchData} />
+                <Button variantt="primary" onClick={() => createBook (
+                    {
+                        title: 'Test Book',
+                        authorId: '1',
+                        genre: 'Test'
+                    }
+                )}>Create Book</Button>
             </div>
             <div className='book-list'>
                 {books.map(book =>
@@ -76,7 +94,7 @@ const BookList = () => {
                                 Genre: {book.genre}<br />
                                 Publication Date: {book.publicationdate}
                             </Card.Text>
-                            <Button variant="danger" onClick={() => deleteBook(book.id)}>Delete</Button>
+                            {/* <Button variant="danger" onClick={() => deleteBook(book.id)}>Delete</Button> */}
                         </Card.Body>
                     </Card>
                 )}

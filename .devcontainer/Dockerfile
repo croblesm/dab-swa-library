@@ -20,3 +20,4 @@ RUN bash ./installSQLtools.sh \
 
 # Install Data API Builder for vscode user
 RUN su vscode -c "dotnet tool install --global Microsoft.DataApiBuilder" 2>&1
+#RUN su vscode -c " npm install -g @azure/static-web-apps-cli" 2>&1
