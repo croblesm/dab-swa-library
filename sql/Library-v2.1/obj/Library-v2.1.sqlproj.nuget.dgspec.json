@@ -1,0 +1,50 @@
+{
+  "format": 1,
+  "restore": {
+    "/workspace/sql/Library-v2.1/Library-v2.1.sqlproj": {}
+  },
+  "projects": {
+    "/workspace/sql/Library-v2.1/Library-v2.1.sqlproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/workspace/sql/Library-v2.1/Library-v2.1.sqlproj",
+        "projectName": "Library-v2.1",
+        "projectPath": "/workspace/sql/Library-v2.1/Library-v2.1.sqlproj",
+        "packagesPath": "/home/vscode/.nuget/packages/",
+        "outputPath": "/workspace/sql/Library-v2.1/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/home/vscode/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net46"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net46": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU5128"
+          ]
+        }
+      },
+      "frameworks": {
+        "net46": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

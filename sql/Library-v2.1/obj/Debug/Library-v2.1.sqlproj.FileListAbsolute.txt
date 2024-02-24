@@ -1,0 +1,9 @@
+/workspace/sql/Library-v2.1/bin/Debug/Library-v2.1.dacpac
+/workspace/sql/Library-v2.1/bin/Debug/Library-v2.1.dll
+/workspace/sql/Library-v2.1/bin/Debug/Library-v2.1.pdb
+/workspace/sql/Library-v2.1/obj/Debug/Model.xml
+/workspace/sql/Library-v2.1/obj/Debug/refactor.xml
+/workspace/sql/Library-v2.1/obj/Debug/postdeploy.sql
+/workspace/sql/Library-v2.1/obj/Debug/predeploy.sql
+/workspace/sql/Library-v2.1/obj/Debug/Library-v2.1.dll
+/workspace/sql/Library-v2.1/obj/Debug/Library-v2.1.pdb

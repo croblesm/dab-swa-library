@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "nev9R0vGtAe3b1rl+E7Mmx0AcB5ixp+xy8t700TR6588t9rnk1/vn/SC+jbw222Fa0IcYe0MDh4gKOBr9elRuw==",
+  "success": true,
+  "projectFilePath": "/workspace/sql/Library-v2.1/Library-v2.1.sqlproj",
+  "expectedPackageFiles": [
+    "/home/vscode/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.0/microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "/home/vscode/.nuget/packages/microsoft.netframework.referenceassemblies.net46/1.0.0/microsoft.netframework.referenceassemblies.net46.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
