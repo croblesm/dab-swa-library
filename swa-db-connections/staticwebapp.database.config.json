@@ -30,6 +30,25 @@
     }
   },
   "entities": {
+    "Author": {
+      "source": "dbo.authors",
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": ["read"]
+        },
+        {
+          "role": "admin",
+          "actions": ["*"]
+        }
+      ],
+      "relationships": {
+        "books": {
+          "cardinality": "many",
+          "target.entity": "Book"
+        }
+      }
+    },
     "Book": {
       "source": {
           "type": "table",

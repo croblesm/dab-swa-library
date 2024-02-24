@@ -55,3 +55,22 @@ You can now use your Static Web App Library Demo Application. It supports author
 ![alt text](./.readme/authpage.png)
 
 ### Non-logged in users receive succesful 201's when they try to Create as configured in `swa-db-connections/staticwebapp.database.config.json`![alt text](./.readme/adminuserscreate.png)
+
+***
+
+## CLI Commands
+> Initial Setup
+npm install -g @azure/static-web-apps-cli
+
+> DB Connection
+swa db init --database-type mssql --connection-string 'Server=localhost;Database=library;User ID=SA;Password=P@ssw0rd!;TrustServerCertificate=true'
+
+> Start app locally
+swa start http://localhost:3000 --run "cd app && npm i && npm start" --data-api-location swa-db-connections
+
+> Test API in browser
+fetch('/data-api/api/Book').then(response => response.json()).then(data => console.log(data))
+
+> Access API in browser
+http://127.0.0.1:4280/
+http://127.0.0.1:4280/data-api/api/Book

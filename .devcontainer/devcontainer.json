@@ -40,8 +40,7 @@
 				"ms-azuretools.vscode-docker",
 				"github.vscode-github-actions",
 				"hashicorp.terraform",
-				"akamud.vscode-theme-onedark",
-				"humao.rest-client"
+				"akamud.vscode-theme-onedark"
 			]
 		}
 	},

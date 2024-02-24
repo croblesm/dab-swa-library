@@ -85,14 +85,14 @@ const BookList = () => {
                 {books.map(book =>
                     <Card key={book.id} style={{ width: '18rem', margin: '1rem' }}>
                         <div style={{ backgroundColor: '#373940' }}>
-                            <Card.Img variant="top" src={book.imageurl} style={{ height: '14rem', width: 'fit-content' }} />
+                            <Card.Img variant="top" src={book.imageUrl} style={{ height: '14rem', width: 'fit-content' }} />
                         </div>
                         <Card.Body>
                             <Card.Title>{book.title}</Card.Title>
                             <Card.Text>
                                 Author ID: {book.authorId}<br />
                                 Genre: {book.genre}<br />
-                                Publication Date: {book.publicationdate}
+                                Publication Date: {book.publicationDate}
                             </Card.Text>
                             {/* <Button variant="danger" onClick={() => deleteBook(book.id)}>Delete</Button> */}
                         </Card.Body>
