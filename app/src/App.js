@@ -29,7 +29,7 @@ function App() {
       <div className="App">
         <Navbar bg="dark" variant="dark">
           <div className="maxWidth1200Centered" style={{ display: 'flex', padding: '1rem', justifyContent: 'space-between'}}>
-            <Navbar.Brand>Library App</Navbar.Brand>
+            <Navbar.Brand>Science Fiction - Library App</Navbar.Brand>
             <Nav className="ml-auto">
               { token ?
                   <Button variant="light">
