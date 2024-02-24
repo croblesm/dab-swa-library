@@ -18,6 +18,8 @@ COPY sql/installSQLtools.sh installSQLtools.sh
 RUN bash ./installSQLtools.sh \
      && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
 
+# Install @azure/static-web-apps-cli globally
+RUN npm install -g @azure/static-web-apps-cli 2>&1
+
 # Install Data API Builder for vscode user
-RUN su vscode -c "dotnet tool install --global Microsoft.DataApiBuilder" 2>&1
-#RUN su vscode -c " npm install -g @azure/static-web-apps-cli" 2>&1
+#RUN su vscode -c "dotnet tool install --global Microsoft.DataApiBuilder" 2>&1
