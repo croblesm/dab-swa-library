@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button, } from 'react-bootstrap';
 import './BookList.css';
-import CreateBookModal from './CreateBookModal';
+//import CreateBookModal from './CreateBookModal';
 
 const BookList = () => {
     const [books, setBooks] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [showModal, setShowModal] = useState(false);
+    //const [showModal, setShowModal] = useState(false);
 
     const fetchData = async (disableLoadState) => {
         if(!disableLoadState) setIsLoading(true);
@@ -41,21 +41,21 @@ const BookList = () => {
         } catch (error) { }
     }
 
-    const deleteBook = async (id) => {
-        try {
-            const response = await fetch(`/data-api/api/Book/id/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-MS-API-ROLE' : 'admin',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(response.statusText);
-            }
-            await fetchData(true);
-        } catch (error) { }
-    }
+    // const deleteBook = async (id) => {
+    //     try {
+    //         const response = await fetch(`/data-api/api/Book/id/${id}`, {
+    //             method: 'DELETE',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //                 'X-MS-API-ROLE' : 'admin',
+    //             }
+    //         });
+    //         if (!response.ok) {
+    //             throw new Error(response.statusText);
+    //         }
+    //         await fetchData(true);
+    //     } catch (error) { }
+    // }
 
     useEffect(() => {
         fetchData();
