@@ -1,4 +1,4 @@
-﻿-- This file contains SQL statements that will be executed after the build script.
+-- This file contains SQL statements that will be executed after the build script.
 IF '$(Environment)' = 'Development'
 BEGIN
     --Create a new user for your login
@@ -21,4 +21,3 @@ BEGIN
     -- Add user to the data reader role
     EXEC sp_addrolemember 'db_owner', 'AppUser';
 END
-GO
