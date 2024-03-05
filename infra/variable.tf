@@ -1,3 +1,8 @@
+variable "subscription_id" {
+  description = "Azure subscription ID"
+  default     = "fa58cf66-caaf-4ba9-875d-f310d3694845"
+}
+
 variable "resource_group_suffix" {
   description = "Resource group name"
   default     = "sqlbits2024-demos"
