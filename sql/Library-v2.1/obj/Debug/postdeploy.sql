@@ -15,11 +15,12 @@ insert dbo.books (id, title, authorId, genre, publicationdate, imageurl) VALUES 
 set identity_insert dbo.books off
 GO
 
--- Add foreign key constraints
-alter table dbo.books with check add constraint [FK_dbo.books_authors] foreign key(authorId)
-references dbo.authors (id)
-GO
+-- -- Add foreign key constraints
+-- alter table dbo.books with check add constraint [FK_dbo.books_authors] foreign key(authorId)
+-- references dbo.authors (id)
+-- go
 
--- Enable foreign key constraints
-alter table dbo.books check constraint [FK_dbo.books_authors]
+-- -- Enable foreign key constraints
+-- alter table dbo.books check constraint [FK_dbo.books_authors]
+-- go
 GO
