@@ -22,11 +22,7 @@
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
 			<Metadata Name="AssemblySymbolsName" Value="/workspace/sql/Library-v2.1/obj/Debug/Library-v2.1.pdb" />
 		</CustomData>
-		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable">
-			<Metadata Name="appPasswordDev" Value="" />
-			<Metadata Name="appPasswordProd" Value="" />
-			<Metadata Name="Environment" Value="" />
-		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
 	<Model>
 		<Element Type="SqlDatabaseOptions">

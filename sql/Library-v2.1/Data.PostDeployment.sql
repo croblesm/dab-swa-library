@@ -1,4 +1,4 @@
-﻿-- This file contains SQL statements that will be executed after the build script.
+-- This file contains SQL statements that will be executed after the build script.
 -- Authors data
 SET IDENTITY_INSERT dbo.authors ON;
 
@@ -15,7 +15,7 @@ SET IDENTITY_INSERT dbo.authors ON;
         VALUES (3, 'Arthur C. Clarke', CAST('1917-12-16' AS Date), 'Sir Arthur Charles Clarke CBE FRAS was an English science fiction writer, science writer, futurist, inventor, undersea explorer, and television series host. He co-wrote the screenplay for the 1968 film 2001: A Space Odyssey, widely regarded as one of the most influential films of all time', 'https://upload.wikimedia.org/wikipedia/commons/6/62/Arthur_C._Clarke_1965.jpg');
         
 SET IDENTITY_INSERT dbo.authors OFF;
-GO
+go
 
 -- Books data
 SET IDENTITY_INSERT dbo.books ON
@@ -33,4 +33,3 @@ SET IDENTITY_INSERT dbo.books ON
         VALUES (3, '2001: A Space Odyssey', 3, 'Science fiction', CAST('1926-04-02' AS Date), N'https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Littleprince.JPG/220px-Littleprince.JPG');
 
 SET IDENTITY_INSERT dbo.books OFF
-GO
