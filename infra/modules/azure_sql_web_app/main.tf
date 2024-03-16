@@ -49,7 +49,6 @@ resource "azurerm_mssql_database" "example" {
 }
 
 locals {
-  #azuresql_conn_string = "Server=tcp:${azurerm_mssql_server.example.name}.database.windows.net,1433;Initial Catalog=${azurerm_mssql_database.example.name};Persist Security Info=False;User ID=${var.sql_admin_login};Password=${var.sql_admin_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
   azuresql_conn_string = "Server=tcp:${azurerm_mssql_server.example.fully_qualified_domain_name},1433;Initial Catalog=${azurerm_mssql_database.example.name};Persist Security Info=False;User ID=${var.sql_admin_login};Password=${var.sql_admin_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 }
 
