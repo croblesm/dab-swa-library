@@ -39,31 +39,31 @@ SET IDENTITY_INSERT dbo.series ON;
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 1)
     INSERT INTO series (name, description) 
-    VALUES ('Prelude to Foundation', 'The first book in the Foundation series.');
+    VALUES (1,'Prelude to Foundation', 'The first book in the Foundation series.');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 2)
     INSERT INTO series (name, description) 
-    VALUES ('Forward the Foundation', 'The second book in the Foundation series.');
+    VALUES (2,'Forward the Foundation', 'The second book in the Foundation series.');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 3)
     INSERT INTO series (name, description) 
-    VALUES ('Foundation', 'The third book in the Foundation series.');
+    VALUES (3,'Foundation', 'The third book in the Foundation series.');
   
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 4)
     INSERT INTO series (name, description) 
-    VALUES ('Foundation and Empire', 'The fourth book in the Foundation series.');
+    VALUES (4,'Foundation and Empire', 'The fourth book in the Foundation series.');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 5)
     INSERT INTO series (name, description) 
-    VALUES ('Second Foundation', 'The fifth book in the Foundation series.');
+    VALUES (5,'Second Foundation', 'The fifth book in the Foundation series.');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 6)
     INSERT INTO series (name, description) 
-    VALUES ('Foundation''s Edge', 'The sixth book in the Foundation series.');
+    VALUES (6,'Foundation''s Edge', 'The sixth book in the Foundation series.');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 7)
     INSERT INTO series (name, description) 
-    VALUES ('Foundation and Earth', 'The seventh book in the Foundation series.');
+    VALUES (7,'Foundation and Earth', 'The seventh book in the Foundation series.');
 
 SET IDENTITY_INSERT dbo.series OFF;
 GO
