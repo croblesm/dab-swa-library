@@ -32,3 +32,38 @@ SET IDENTITY_INSERT dbo.books ON
         VALUES (3, '2001: A Space Odyssey', 3, 'Science fiction', CAST('1926-04-02' AS Date), N'https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Littleprince.JPG/220px-Littleprince.JPG');
 
 SET IDENTITY_INSERT dbo.books OFF
+go
+
+-- Series data
+SET IDENTITY_INSERT dbo.series ON
+
+IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 1)
+    INSERT INTO series (id, name, description) 
+    VALUES (1, 'Prelude to Foundation', 'The first book in the Foundation series.');
+
+IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 2)
+    INSERT INTO series (id, name, description) 
+    VALUES (2, 'Forward the Foundation', 'The second book in the Foundation series.');
+
+IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 3)
+    INSERT INTO series (id, name, description) 
+    VALUES (3, 'Foundation', 'The third book in the Foundation series.');
+  
+IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 4)
+    INSERT INTO series (id, name, description) 
+    VALUES (4, 'Foundation and Empire', 'The fourth book in the Foundation series.');
+
+IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 5)
+    INSERT INTO series (id, name, description) 
+    VALUES (5, 'Second Foundation', 'The fifth book in the Foundation series.');
+
+IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 6)
+    INSERT INTO series (id, name, description) 
+    VALUES (6, 'Foundation''s Edge', 'The sixth book in the Foundation series.');
+
+IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 7)
+    INSERT INTO series (id, name, description) 
+    VALUES (7, 'Foundation and Earth', 'The seventh book in the Foundation series.');
+
+SET IDENTITY_INSERT dbo.series OFF
+go
