@@ -1,4 +1,5 @@
-﻿-- Authors data
+﻿-- This file contains SQL statements that will be executed after the build script.
+-- Authors data
 SET IDENTITY_INSERT dbo.authors ON;
 
     IF NOT EXISTS (SELECT 1 FROM dbo.authors WHERE id = 1)

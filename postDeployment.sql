@@ -1,4 +1,3 @@
--- This file contains SQL statements that will be executed after the build script.
 -- Authors data
 SET IDENTITY_INSERT dbo.authors ON;
 
@@ -13,9 +12,9 @@ SET IDENTITY_INSERT dbo.authors ON;
     IF NOT EXISTS (SELECT 1 FROM dbo.authors WHERE id = 3)
         INSERT dbo.authors (id, name, birthdate, bio, imageurl) 
         VALUES (3, 'Arthur C. Clarke', CAST('1917-12-16' AS Date), 'Sir Arthur Charles Clarke CBE FRAS was an English science fiction writer, science writer, futurist, inventor, undersea explorer, and television series host. He co-wrote the screenplay for the 1968 film 2001: A Space Odyssey, widely regarded as one of the most influential films of all time', 'https://upload.wikimedia.org/wikipedia/commons/6/62/Arthur_C._Clarke_1965.jpg');
-        
+
 SET IDENTITY_INSERT dbo.authors OFF;
-GO
+go
 
 -- Books data
 SET IDENTITY_INSERT dbo.books ON
@@ -33,45 +32,38 @@ SET IDENTITY_INSERT dbo.books ON
         VALUES (3, '2001: A Space Odyssey', 3, 'Science fiction', CAST('1926-04-02' AS Date), N'https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Littleprince.JPG/220px-Littleprince.JPG');
 
 SET IDENTITY_INSERT dbo.books OFF
-GO
+go
 
 -- Series data
-SET IDENTITY_INSERT dbo.series ON;
+SET IDENTITY_INSERT dbo.series ON
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 1)
-    INSERT INTO series (name, description) 
-    VALUES (1,'Prelude to Foundation', 'The first book in the Foundation series.');
+    INSERT INTO series (id, name, description) 
+    VALUES (1, 'Prelude to Foundation', 'The first book in the Foundation series.');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 2)
-    INSERT INTO series (name, description) 
-    VALUES (2,'Forward the Foundation', 'The second book in the Foundation series.');
+    INSERT INTO series (id, name, description) 
+    VALUES (2, 'Forward the Foundation', 'The second book in the Foundation series.');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 3)
-    INSERT INTO series (name, description) 
-    VALUES (3,'Foundation', 'The third book in the Foundation series.');
+    INSERT INTO series (id, name, description) 
+    VALUES (3, 'Foundation', 'The third book in the Foundation series.');
   
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 4)
-    INSERT INTO series (name, description) 
-    VALUES (4,'Foundation and Empire', 'The fourth book in the Foundation series.');
+    INSERT INTO series (id, name, description) 
+    VALUES (4, 'Foundation and Empire', 'The fourth book in the Foundation series.');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 5)
-    INSERT INTO series (name, description) 
-    VALUES (5,'Second Foundation', 'The fifth book in the Foundation series.');
+    INSERT INTO series (id, name, description) 
+    VALUES (5, 'Second Foundation', 'The fifth book in the Foundation series.');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 6)
-    INSERT INTO series (name, description) 
-    VALUES (6,'Foundation''s Edge', 'The sixth book in the Foundation series.');
+    INSERT INTO series (id, name, description) 
+    VALUES (6, 'Foundation''s Edge', 'The sixth book in the Foundation series.');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.series WHERE id = 7)
-    INSERT INTO series (name, description) 
-    VALUES (7,'Foundation and Earth', 'The seventh book in the Foundation series.');
+    INSERT INTO series (id, name, description) 
+    VALUES (7, 'Foundation and Earth', 'The seventh book in the Foundation series.');
 
-SET IDENTITY_INSERT dbo.series OFF;
-GO
-
--- -- Create series table
--- CREATE TABLE dbo.series (
---   id INT PRIMARY KEY IDENTITY (1, 1) NOT NULL,
---   name NVARCHAR(100) NOT NULL,
---   description NVARCHAR(1000)
--- );
+SET IDENTITY_INSERT dbo.series OFF
+go
