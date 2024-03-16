@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Name>Library-v2.1</Name>
     <ProjectGuid>{7BF57DD3-9F24-471D-86EA-CE8449F9FEAE}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
     <ModelCollation>1033, CI</ModelCollation>
   </PropertyGroup>
   <ItemGroup>
